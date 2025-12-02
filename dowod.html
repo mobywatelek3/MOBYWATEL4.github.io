@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wygenerowany dokument</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Jeśli chcesz, możesz podłączyć swój główny CSS -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+<h2>Wygenerowany dokument</h2>
+
+<div class="dowodBox">
+  <p><b>Imię:</b> <span id="imie"></span></p>
+  <p><b>Nazwisko:</b> <span id="nazwisko"></span></p>
+  <p><b>PESEL:</b> <span id="pesel"></span></p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  document.getElementById('imie').textContent = params.get('imie');
+  document.getElementById('nazwisko').textContent = params.get('nazwisko');
+  document.getElementById('pesel').textContent = params.get('pesel');
+</script>
+
+</body>
+</html>
